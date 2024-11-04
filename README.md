@@ -40,7 +40,7 @@ cd humanprotocolbot
 ### Step 3: Install Required Packages
 
 ```bash
-pip sync
+uv sync
 ```
 
 ## Configuration
