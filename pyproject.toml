@@ -1,0 +1,15 @@
+[project]
+name = "humanprotocolbot"
+version = "0.1.0"
+description = "Automate your interactions with the Human Protocol Telegram Bot! This script is designed to handle daily claims, ensuring you never miss out on your rewards. Currently, the bot supports daily claims every 6 hours, with more features coming soon."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fake-useragent>=1.5.1",
+    "httpx>=0.27.2",
+    "loguru>=0.7.2",
+    "pyenvloadermeta>=1.0.2",
+    "pyrogram>=2.0.106",
+    "tgcrypto>=1.2.5",
+    "timecalculator>=1.2.1",
+]
