@@ -40,7 +40,7 @@ coverage.xml
 .ipynb_checkpoints
 
 # Python virtual environment
-.env
+# .env
 .venv
 ENV/
 env/
