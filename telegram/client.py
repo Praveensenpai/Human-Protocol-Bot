@@ -4,13 +4,15 @@ from pyrogram.raw.functions.messages.request_app_web_view import RequestAppWebVi
 from pyrogram.raw.types.input_peer_user import InputPeerUser
 from pyrogram.raw.types.app_web_view_result_url import AppWebViewResultUrl
 from pyrogram.errors.exceptions import UsernameNotOccupied
-from urllib.parse import unquote
+
 from env import Env
+
 import os
 import re
 from typing import Final
 from telegram.platform import Platform
 from utils.loggy import logger
+import urllib.parse
 
 
 class TGClient(Client):
@@ -62,7 +64,9 @@ class TGClient(Client):
                 web_view: AppWebViewResultUrl = await self.invoke(web_view_request)
 
                 match = re.search(r"tgWebAppData=([^&]+)", web_view.url)
-                query = unquote(unquote(match.group(1))) if match else None
+                query = match.group(1) if match else ""
+                query = urllib.parse.unquote(query)
+
                 if not query:
                     raise ValueError("Could not find query string")
                 return query
