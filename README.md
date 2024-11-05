@@ -1,4 +1,4 @@
-# Human Protocol Telegram Bot Automation
+# Human Protocol - Telegram Bot Automation
 
 Automate your interactions with the Human Protocol Telegram Bot! This script is designed to handle daily claims, ensuring you never miss out on your rewards. Currently, the bot supports daily claims every 6 hours, with more features coming soon.
 
@@ -33,8 +33,8 @@ powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | ie
 ### Step 2: Clone the Repository
 
 ```bash
-git clone https://github.com/Praveensenpai/humanprotocolbot
-cd humanprotocolbot
+git clone https://github.com/Praveensenpai/Human-Protocol-Bot
+cd Human-Protocol-Bot
 ```
 
 ### Step 3: Install Required Packages
