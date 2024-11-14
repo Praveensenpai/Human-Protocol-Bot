@@ -23,7 +23,7 @@ class HumanProtocolBot:
             logger.info(f"Starting claiming task for user: {user_info['username']}")
             last_claimed_at = iso_to_datetime(user_info["last_claimed_at"])
             time_difference = datetime.now(timezone.utc) - last_claimed_at
-            threshold = timedelta(hours=6)
+            threshold = timedelta(hours=2)
             if time_difference <= threshold:
                 remaining_time = threshold - time_difference
                 hours, remainder = divmod(remaining_time.seconds, 3600)
@@ -45,7 +45,7 @@ class HumanProtocolBot:
                 await asyncio.sleep(extra_minutes.total_seconds())
                 logger.info("Extra wait time is over. You can now claim!")
             else:
-                logger.info("More than 6 hours have passed. You're good to claim!")
+                logger.info("More than 2 hours have passed. You're good to claim!")
 
             logger.info(f"Claiming for user: {user_info['username']}")
 
