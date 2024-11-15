@@ -4,7 +4,7 @@ Automate your interactions with the Human Protocol Telegram Bot! This script is 
 
 ## Features
 
-- **Daily Claim Automation**: Automatically claims rewards every 6 hours.
+- **Daily Claim Automation**: Automatically claims rewards every 2 hours.
 - **Easy Configuration**: Set your environment variables easily.
 - **Cross-Platform Support**: Works on both Linux and Windows.
 
